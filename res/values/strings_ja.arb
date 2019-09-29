@@ -1,0 +1,8 @@
+{
+  "app_name": "Flutter ツールサンプル",
+  "common_start": "Start",
+  "tools_list_title": "ツールリスト",
+  "tools_my_calculator": "電卓",
+  "tools_my_bookmarks": "お気に入りページ",
+  "about_description": "Flutterベースのツールサンプルです。"
+}

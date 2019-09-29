@@ -1,0 +1,14 @@
+{
+  "app_name": "Flutter tools sample",
+  "app_version": "Calculator",
+  "common_start": "Start",
+  "common_yes": "YES",
+  "common_no": "NO",
+  "common_ok": "OK",
+  "common_cancel": "CANCEL",
+  "tools_list_title": "Tools list",
+  "tools_my_calculator": "Calculator",
+  "tools_my_bookmarks": "My Bookmarks",
+  "about_description": "Flutter tools sample, testing flutter code.",
+  "string_arguments": "String number is $number"
+}
