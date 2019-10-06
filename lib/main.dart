@@ -1,7 +1,10 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_tools_sample/common/const_vars.dart';
 import 'package:flutter_tools_sample/generated/i18n.dart';
 import 'package:flutter_tools_sample/main_list.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() => runApp(MyApp());
 
@@ -9,35 +12,27 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      // アプリタイトル(8.0以前は履歴画面のタイトルに使用される。)
       onGenerateTitle: (BuildContext context) => S.of(context).app_name,
+      // アプリのテーマ設定
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      // アプリのローカリゼーション設定
       localizationsDelegates: [
         S.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
       ],
+      // アプリのサポートするロケール種別設定
       supportedLocales: S.delegate.supportedLocales,
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      // アプリの画面widget設定
+      home: MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
-  final String title;
-
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
@@ -45,30 +40,68 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
     return Scaffold(
+      // appBar：アプリ画面のバー
       appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
+        // アプリ画面上部のバーのタイトル
         title: Text(S.of(context).app_name),
+        bottom: PreferredSize(
+          preferredSize: const Size.fromHeight(100.0),
+          child: Container(
+              alignment: Alignment.bottomLeft,
+              padding: EdgeInsets.only(
+                left: 24,
+                bottom: 10,
+              ),
+              child: Text(
+                'Welcome',
+                style: TextStyle(
+                  fontSize: 30,
+                  color: Colors.white,
+                ),
+              )),
+        ),
       ),
+      // body：アプリ画面のバー
       body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
+            Container(
+              alignment: Alignment.topLeft,
+              padding: EdgeInsets.only(
+                left: 24,
+                top: 16,
+              ),
+              child: Text(S.of(context).main_explain_message),
+            ),
+            InkWell(
+              child: Text(
+                MY_APP_GIT_URL,
+                style: TextStyle(color: Colors.blue),
+              ),
+              onTap: () async {
+                if (await canLaunch(MY_APP_GIT_URL)) {
+                  await launch(MY_APP_GIT_URL);
+                }
+              },
+            ),
+            Text(''),
+            Text(
+              S.of(context).main_start_button_message,
+              style: TextStyle(
+                color: Colors.blueGrey,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
             RaisedButton(
               child: Text(S.of(context).common_start),
               onPressed: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => ToolsListPage()));
               },
+              color: Colors.blueGrey,
+              textColor: Colors.white,
             ),
           ],
         ),

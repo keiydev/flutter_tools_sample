@@ -14,7 +14,7 @@ class S implements WidgetsLocalizations {
   static S current;
 
   static const GeneratedLocalizationsDelegate delegate =
-      GeneratedLocalizationsDelegate();
+    GeneratedLocalizationsDelegate();
 
   static S of(BuildContext context) => Localizations.of<S>(context, S);
 
@@ -27,8 +27,10 @@ class S implements WidgetsLocalizations {
   String get common_cancel => "CANCEL";
   String get common_no => "NO";
   String get common_ok => "OK";
-  String get common_start => "Start";
+  String get common_start => "START";
   String get common_yes => "YES";
+  String get main_explain_message => "This App provides sample implementation of tools using with Flutter. If you want to see the implementation of this app source, please access the following URL link.";
+  String get main_start_button_message => "Tap the start button to see a list of tools.";
   String get tools_list_title => "Tools list";
   String get tools_my_bookmarks => "My Bookmarks";
   String get tools_my_calculator => "Calculator";
@@ -46,9 +48,13 @@ class $ja extends S {
   @override
   String get tools_my_bookmarks => "お気に入りページ";
   @override
-  String get common_start => "Start";
+  String get common_start => "START";
   @override
   String get tools_my_calculator => "電卓";
+  @override
+  String get main_explain_message => "このアプリはFlutterを使用したツールのサンプル実装を提供します。アプリのソースは以下のリンク先を参照してください。";
+  @override
+  String get main_start_button_message => "STARTをタップするとツールリストを表示します。";
   @override
   String get tools_list_title => "ツールリスト";
   @override
@@ -69,8 +75,7 @@ class GeneratedLocalizationsDelegate extends LocalizationsDelegate<S> {
     ];
   }
 
-  LocaleListResolutionCallback listResolution(
-      {Locale fallback, bool withCountry = true}) {
+  LocaleListResolutionCallback listResolution({Locale fallback, bool withCountry = true}) {
     return (List<Locale> locales, Iterable<Locale> supported) {
       if (locales == null || locales.isEmpty) {
         return fallback ?? supported.first;
@@ -80,8 +85,7 @@ class GeneratedLocalizationsDelegate extends LocalizationsDelegate<S> {
     };
   }
 
-  LocaleResolutionCallback resolution(
-      {Locale fallback, bool withCountry = true}) {
+  LocaleResolutionCallback resolution({Locale fallback, bool withCountry = true}) {
     return (Locale locale, Iterable<Locale> supported) {
       return _resolve(locale, fallback, supported, withCountry);
     };
@@ -99,7 +103,7 @@ class GeneratedLocalizationsDelegate extends LocalizationsDelegate<S> {
           S.current = const $en();
           return SynchronousFuture<S>(S.current);
         default:
-        // NO-OP.
+          // NO-OP.
       }
     }
     S.current = const S();
@@ -115,8 +119,7 @@ class GeneratedLocalizationsDelegate extends LocalizationsDelegate<S> {
   ///
   /// Internal method to resolve a locale from a list of locales.
   ///
-  Locale _resolve(Locale locale, Locale fallback, Iterable<Locale> supported,
-      bool withCountry) {
+  Locale _resolve(Locale locale, Locale fallback, Iterable<Locale> supported, bool withCountry) {
     if (locale == null || !_isSupported(locale, withCountry)) {
       return fallback ?? supported.first;
     }
@@ -149,9 +152,7 @@ class GeneratedLocalizationsDelegate extends LocalizationsDelegate<S> {
         }
 
         // If no country requirement is requested, check if this locale has no country.
-        if (true != withCountry &&
-            (supportedLocale.countryCode == null ||
-                supportedLocale.countryCode.isEmpty)) {
+        if (true != withCountry && (supportedLocale.countryCode == null || supportedLocale.countryCode.isEmpty)) {
           return true;
         }
       }
@@ -161,7 +162,7 @@ class GeneratedLocalizationsDelegate extends LocalizationsDelegate<S> {
 }
 
 String getLang(Locale l) => l == null
-    ? null
-    : l.countryCode != null && l.countryCode.isEmpty
-        ? l.languageCode
-        : l.toString();
+  ? null
+  : l.countryCode != null && l.countryCode.isEmpty
+    ? l.languageCode
+    : l.toString();
