@@ -39,6 +39,7 @@
 **/android/**/GeneratedPluginRegistrant.java
 **/android/key.properties
 **/android/app/*.keystore
+**/android/app/google-services.json
 
 # iOS/XCode related
 **/ios/**/*.mode1v3

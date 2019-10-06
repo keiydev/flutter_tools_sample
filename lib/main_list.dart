@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_tools_sample/experimental/listview.dart';
 import 'package:flutter_tools_sample/generated/i18n.dart';
 import 'package:flutter_tools_sample/tools/Calculator.dart';
+import 'package:flutter_tools_sample/tools/firebase/firebase_messaging.dart';
 import 'package:package_info/package_info.dart';
 
 class ToolsListPage extends StatelessWidget {
@@ -73,6 +74,22 @@ class ToolsListPage extends StatelessWidget {
           ),
         ),
         child: ListTile(
+          leading: Icon(Icons.cloud),
+          title: Text('Firebase Messaging Demo'),
+          onTap: () {
+            Navigator.push(
+                _context,
+                MaterialPageRoute(
+                    builder: (context) => PushMessagingExample()));
+          },
+        )),
+    Container(
+        decoration: new BoxDecoration(
+          border: new Border(
+            bottom: new BorderSide(color: Colors.black26),
+          ),
+        ),
+        child: ListTile(
           leading: Icon(Icons.phone_iphone),
           title: Text(Platform.isIOS
               ? 'Not implemented yet(Start iOS Screen)'
@@ -96,7 +113,6 @@ class ToolsListPage extends StatelessWidget {
             showAboutDialog(
                 context: _context,
                 applicationName: S.of(_context).app_name,
-                //applicationVersion: "v1.0.0",
                 applicationVersion: packageInfo.version,
                 applicationIcon: Image.asset('res/images/launcher_icon.png',
                     height: 64.0, width: 64.0),
