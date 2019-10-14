@@ -22,6 +22,7 @@ class S implements WidgetsLocalizations {
   TextDirection get textDirection => TextDirection.ltr;
 
   String get about_description => "Flutter tools sample, testing flutter code.";
+  String get android_layout_list_title => "Android Layout List";
   String get app_name => "Flutter tools sample";
   String get app_version => "Calculator";
   String get common_cancel => "CANCEL";

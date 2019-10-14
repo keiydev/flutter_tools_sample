@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_tools_sample/android_layout/android_layout_list.dart';
 import 'package:flutter_tools_sample/experimental/listview.dart';
 import 'package:flutter_tools_sample/generated/i18n.dart';
 import 'package:flutter_tools_sample/tools/Calculator.dart';
@@ -23,9 +24,9 @@ class ToolsListPage extends StatelessWidget {
 
   final List<Widget> listTiles = <Widget>[
     Container(
-        decoration: new BoxDecoration(
-          border: new Border(
-            bottom: new BorderSide(color: Colors.black26),
+        decoration: BoxDecoration(
+          border: Border(
+            bottom: BorderSide(color: Colors.black26),
           ),
         ),
         child: ListTile(
@@ -50,6 +51,28 @@ class ToolsListPage extends StatelessWidget {
           onTap: () {openDialog(_context, 0);},
         )
     ),*/
+    Platform.isAndroid
+        ? Container(
+            decoration: new BoxDecoration(
+              border: new Border(
+                bottom: new BorderSide(color: Colors.black26),
+              ),
+            ),
+            child: ListTile(
+              leading: Icon(Icons.android),
+              title: Builder(
+                  builder: (context) => Text(Platform.isAndroid
+                      ? S.of(context).android_layout_list_title
+                      : 'not supported this device')),
+              enabled: Platform.isAndroid,
+              onTap: () {
+                Navigator.push(
+                    _context,
+                    MaterialPageRoute(
+                        builder: (context) => AndroidLayoutListPage()));
+              },
+            ))
+        : Container(),
     Container(
         decoration: new BoxDecoration(
           border: new Border(

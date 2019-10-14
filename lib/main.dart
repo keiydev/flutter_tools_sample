@@ -1,4 +1,3 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_tools_sample/common/const_vars.dart';
@@ -50,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Container(
               alignment: Alignment.bottomLeft,
               padding: EdgeInsets.only(
-                left: 24,
+                left: 16,
                 bottom: 10,
               ),
               child: Text(
@@ -70,7 +69,8 @@ class _MyHomePageState extends State<MyHomePage> {
             Container(
               alignment: Alignment.topLeft,
               padding: EdgeInsets.only(
-                left: 24,
+                left: 16,
+                right: 16,
                 top: 16,
               ),
               child: Text(S.of(context).main_explain_message),

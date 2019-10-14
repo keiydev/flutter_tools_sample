@@ -8,6 +8,12 @@ import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugins.GeneratedPluginRegistrant
 
+import com.keiydev.flutter_tools_sample.viewplugin.NLayoutFactory
+import com.keiydev.flutter_tools_sample.viewplugin.NMethodTextViewFactory
+import com.keiydev.flutter_tools_sample.viewplugin.NBasicTextViewFactory
+import com.keiydev.flutter_tools_sample.viewplugin.NEventTextViewFactory
+import com.keiydev.flutter_tools_sample.viewplugin.NMethodListViewFactory
+
 class MainActivity: FlutterActivity() {
   companion object {
     // main.dartでMethodChannelのコンストラクタで指定した文字列です
@@ -19,6 +25,11 @@ class MainActivity: FlutterActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     GeneratedPluginRegistrant.registerWith(this)
+    NLayoutFactory.registerWith(this)
+    NMethodTextViewFactory.registerWith(this)
+    NBasicTextViewFactory.registerWith(this)
+    NEventTextViewFactory.registerWith(this)
+    NMethodListViewFactory.registerWith(this)
 
     // MethodChannelからのメッセージを受け取ります
     // （flutterViewはFlutterActivityのプロパティ、CHANNELはcompanion objectで定義しています）
@@ -35,6 +46,9 @@ class MainActivity: FlutterActivity() {
   private fun launchAndroidScreen(parameters: String) {
     val intent = Intent()
     intent.action = android.provider.Settings.ACTION_SETTINGS
+    //intent.action = Intent.ACTION_MAIN
+    //intent.setClassName(getPackageName(), ".LinearLayoutActivity")
+    //intent.setClass(this, LinearLayoutActivity::class.java)
     startActivity(intent)
   }
 }
