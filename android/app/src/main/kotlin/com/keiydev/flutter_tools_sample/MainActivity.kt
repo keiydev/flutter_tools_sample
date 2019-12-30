@@ -1,7 +1,9 @@
 package com.keiydev.flutter_tools_sample
 
 import android.content.Intent
+import android.graphics.Point
 import android.os.Bundle
+import android.view.Display
 
 import io.flutter.app.FlutterActivity
 import io.flutter.plugin.common.MethodCall
@@ -35,10 +37,30 @@ class MainActivity: FlutterActivity() {
     // （flutterViewはFlutterActivityのプロパティ、CHANNELはcompanion objectで定義しています）
     MethodChannel(this.flutterView, CHANNEL)
             .setMethodCallHandler { methodCall: MethodCall, result: MethodChannel.Result ->
+              when(methodCall.method) {
+                METHOD_TEST -> {
+                  // invokeMethodの第二引数で指定したパラメータを取得できます
+                  val parameters = methodCall.arguments<String>()
+                  launchAndroidScreen(parameters)
+                }
+                "getDisplayHeight" -> {
+                  val display : Display = windowManager.defaultDisplay
+                  val size : Point = Point()
+                  display.getSize(size)
+                  val width = size.x
+                  val height = size.y
+                  result.success(height)
+                }
+                "getDisplayWidth" -> {
+                  val display : Display = windowManager.defaultDisplay
+                  val size : Point = Point()
+                  display.getSize(size)
+                  val width = size.x
+                  val height = size.y
+                  result.success(width)
+                }
+              }
               if (methodCall.method == METHOD_TEST) {
-                // invokeMethodの第二引数で指定したパラメータを取得できます
-                val parameters = methodCall.arguments<String>()
-                launchAndroidScreen(parameters)
               }
             }
   }

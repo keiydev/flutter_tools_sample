@@ -6,6 +6,7 @@ import 'package:flutter_tools_sample/android_layout/android_layout_list.dart';
 import 'package:flutter_tools_sample/experimental/listview.dart';
 import 'package:flutter_tools_sample/generated/i18n.dart';
 import 'package:flutter_tools_sample/tools/Calculator.dart';
+import 'package:flutter_tools_sample/zoom_charactor_view.dart';
 import 'package:package_info/package_info.dart';
 
 class ToolsListPage extends StatelessWidget {
@@ -36,6 +37,21 @@ class ToolsListPage extends StatelessWidget {
           onTap: () {
             Navigator.push(_context,
                 MaterialPageRoute(builder: (context) => CalculatorPage()));
+          },
+        )),
+    Container(
+        decoration: BoxDecoration(
+          border: Border(
+            bottom: BorderSide(color: Colors.black26),
+          ),
+        ),
+        child: ListTile(
+          leading: Icon(Icons.text_format),
+          title: Builder(
+              builder: (context) => Text(S.of(context).show_zoom_character)),
+          onTap: () {
+            Navigator.push(_context,
+                MaterialPageRoute(builder: (context) => ZoomCharacterPage()));
           },
         )),
     /*

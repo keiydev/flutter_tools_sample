@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_tools_sample/android_layout/android_platformview.dart';
 import 'package:flutter_tools_sample/experimental/listview.dart';
 import 'package:flutter_tools_sample/generated/i18n.dart';
+import 'package:flutter_tools_sample/layout_screen_size.dart';
 import 'package:flutter_tools_sample/main_list.dart';
 import 'package:flutter_tools_sample/tools/Calculator.dart';
 import 'package:package_info/package_info.dart';
@@ -23,17 +24,30 @@ class AndroidLayoutListPage extends StatelessWidget {
   }
 
   final List<Widget> listTiles = <Widget>[
+    Platform.isAndroid
+        ? Container(
+            decoration: BoxDecoration(
+                border: Border(bottom: BorderSide(color: Colors.black26))),
+            child: ListTile(
+              title: Text("Android PlatformView"),
+              onTap: () {
+                Navigator.push(
+                    _pageContext,
+                    MaterialPageRoute(
+                        builder: (context) => AndroidLinearLayoutPage()));
+              },
+            ))
+        : Container(),
     Container(
-        decoration: BoxDecoration(
-            border: Border(bottom: BorderSide(color: Colors.black26))),
-        child: ListTile(
-          title: Text("Android PlatformView"),
-          onTap: () {
-            Navigator.push(
-                _pageContext,
-                MaterialPageRoute(
-                    builder: (context) => AndroidLinearLayoutPage()));
-          },
-        )),
+      decoration: BoxDecoration(
+          border: Border(bottom: BorderSide(color: Colors.black26))),
+      child: ListTile(
+        title: Text("Screen size"),
+        onTap: () {
+          Navigator.push(_pageContext,
+              MaterialPageRoute(builder: (context) => LayoutScreenSizePage()));
+        },
+      ),
+    )
   ];
 }

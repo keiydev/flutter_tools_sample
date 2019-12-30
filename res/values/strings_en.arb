@@ -13,5 +13,6 @@
   "tools_my_bookmarks": "My Bookmarks",
   "about_description": "Flutter tools sample, testing flutter code.",
   "string_arguments": "String number is $number",
-  "android_layout_list_title": "Android Layout List"
+  "android_layout_list_title": "Android Layout List",
+  "show_zoom_character": "Show zoom character"
 }

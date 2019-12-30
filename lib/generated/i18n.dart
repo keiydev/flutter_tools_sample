@@ -32,6 +32,7 @@ class S implements WidgetsLocalizations {
   String get common_yes => "YES";
   String get main_explain_message => "This App provides sample implementation of tools using with Flutter. If you want to see the implementation of this app source, please access the following URL link.";
   String get main_start_button_message => "Tap the start button to see a list of tools.";
+  String get show_zoom_character => "Show zoom character";
   String get tools_list_title => "Tools list";
   String get tools_my_bookmarks => "My Bookmarks";
   String get tools_my_calculator => "Calculator";
@@ -56,6 +57,8 @@ class $ja extends S {
   String get main_explain_message => "このアプリはFlutterを使用したツールのサンプル実装を提供します。アプリのソースは以下のリンク先を参照してください。";
   @override
   String get main_start_button_message => "STARTをタップするとツールリストを表示します。";
+  @override
+  String get show_zoom_character => "文字拡大表示";
   @override
   String get tools_list_title => "ツールリスト";
   @override
