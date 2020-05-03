@@ -19,15 +19,16 @@ import Flutter
     GeneratedPluginRegistrant.register(with: self)
 
     // MethodChannelはAndroidと同様、名前とFlutterViewControllerから生成します
-    let methdoChannel = FlutterMethodChannel(name: methodChannelName, binaryMessenger: flutterViewController)
+    let methdoChannel = FlutterMethodChannel(name: methodChannelName, binaryMessenger: flutterViewController.binaryMessenger)
     // MethodChannelからのメッセージを受け取ります
-    methdoChannel.setMethodCallHandler { [weak self] methodCall, result in
-        if methodChannel.method == methodTest {
+    methdoChannel.setMethodCallHandler({
+        (methodCall: FlutterMethodCall, result: @escaping FlutterResult) -> Void in
+        if methodCall.method == self.methodTest {
             // invokeMethodの第二引数で指定したパラメータを受け取れます
             let parameters = methodCall.arguments as? String
-            self?.launchiOSScreen(parameters)
+            self.launchiOSScreen(parameters)
         }
-    }
+    })
 
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
   }
