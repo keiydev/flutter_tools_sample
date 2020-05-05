@@ -43,7 +43,10 @@ class ZoomCharacterState extends State<ZoomCharacter> {
       ),
       body: TextField(
         controller: _textEditingController,
-        style: GoogleFonts.notoSerifJP(fontSize: 200),
+        style: TextStyle(fontFamily: 'NotoSerifJP', fontSize: 200),
+        //style: GoogleFonts.notoSerif(
+        //  fontSize: 200,
+        //),
         strutStyle: StrutStyle(
           fontSize: 200.0,
           height: 1.5,
@@ -110,7 +113,9 @@ class ZoomCharacterState2 extends State<ZoomCharacter2> {
       scrollDirection: Axis.horizontal,
       child: Text(
         widget.myText,
-        style: GoogleFonts.notoSerifJP(fontSize: 410),
+        //style: GoogleFonts.getFont('notoSerifJP',
+        //    fontSize: 410), //notoSerifJP(fontSize: 200),
+        style: TextStyle(fontFamily: 'NotoSerifJP', fontSize: 410),
       ),
     ));
   }

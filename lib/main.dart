@@ -1,11 +1,19 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_tools_sample/common/const_vars.dart';
 import 'package:flutter_tools_sample/generated/i18n.dart';
 import 'package:flutter_tools_sample/main_list.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  LicenseRegistry.addLicense(() async* {
+    final license = await rootBundle.loadString('res/google_fonts/OFL.txt');
+    yield LicenseEntryWithLineBreaks(['google_fonts'], license);
+  });
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
