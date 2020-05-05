@@ -114,7 +114,7 @@ class ToolsListPage extends StatelessWidget {
         child: ListTile(
           leading: Icon(Icons.phone_iphone),
           title: Text(Platform.isIOS
-              ? 'Not implemented yet(Start iOS Screen)'
+              ? 'Start iOS Settings'
               : 'not supported this device'),
           enabled: Platform.isIOS,
           onTap: () {

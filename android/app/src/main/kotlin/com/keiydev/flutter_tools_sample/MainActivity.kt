@@ -46,7 +46,7 @@ class MainActivity: FlutterActivity() {
                 "getDisplayHeight" -> {
                   val display : Display = windowManager.defaultDisplay
                   val size : Point = Point()
-                  display.getSize(size)
+                  display.getRealSize(size)
                   val width = size.x
                   val height = size.y
                   result.success(height)
@@ -54,7 +54,7 @@ class MainActivity: FlutterActivity() {
                 "getDisplayWidth" -> {
                   val display : Display = windowManager.defaultDisplay
                   val size : Point = Point()
-                  display.getSize(size)
+                  display.getRealSize(size)
                   val width = size.x
                   val height = size.y
                   result.success(width)

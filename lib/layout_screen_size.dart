@@ -94,15 +94,15 @@ class _ScreenSizeWidgetState extends State<ScreenSizeWidget> {
         child: Text(
           "○DP(window.devicePixelRatio) = " +
               window.devicePixelRatio.toString() +
-              "\n○Android screen size(px): height x width = " +
+              "\n○window.physicalSize(px): height x width = " +
               window.physicalSize.height.toString() +
               " x " +
               window.physicalSize.width.toString() +
-              "\n○Flutter Screen size(dp): height x width = " +
+              "\n○MediaQuery size(dp): height x width = " +
               screenHeight(context).toString() +
               " x " +
               screenWidth(context).toString() +
-              "\n○Flutter Toolbar height(dp): height = " +
+              "\n○Flutter Toolbar height(kToolbarHeight)(dp): height = " +
               kToolbarHeight.toString() +
               "\n○View size(dp): height x width = " +
               _FirstWidgetSize.height.toString() +
@@ -112,7 +112,7 @@ class _ScreenSizeWidgetState extends State<ScreenSizeWidget> {
               _NscreenSize.height.toString() +
               " x " +
               _NscreenSize.width.toString() +
-              "\n○textScaleFactor = " +
+              "\n○MediaQuery textScaleFactor = " +
               MediaQuery.of(context).textScaleFactor.toString(),
           style:
               // fixed font size
