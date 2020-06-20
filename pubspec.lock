@@ -139,6 +139,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_i18n:
+    dependency: "direct main"
+    description:
+      name: flutter_i18n
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.16.2"
   flutter_localizations:
     dependency: "direct main"
     description: flutter
@@ -224,6 +231,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.12.6"
+  merge_map:
+    dependency: transitive
+    description:
+      name: merge_map
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.2"
   meta:
     dependency: transitive
     description:
@@ -439,6 +453,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.5.0"
+  xml2json:
+    dependency: transitive
+    description:
+      name: xml2json
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.2.0"
   yaml:
     dependency: transitive
     description:
