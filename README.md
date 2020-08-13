@@ -12,16 +12,23 @@ Flutterで作成したサンプルアプリです。
 
 ## 開発環境
 
-### Flutter SDK: v1.9.1
+### <a href="https://flutter.dev/">Flutter SDK</a>: v1.20.1
 
-### Android Studio: 3.5.1
+### <a href="https://developer.android.com/studio">Android Studio</a>: 4.0.1
 
-#### 使用Plugin: 
+#### Android Studio plugin
 
-* Flutter: 必須
-* Dart: 必須
-* Flutter i18n: おすすめ。Flutterの多言語対応を楽にしてくれる。
-* Kotlin: おすすめ。Android側のjavaからkotlinへの移行に。
+* <a href="https://plugins.jetbrains.com/plugin/9212-flutter">Flutter</a>: 48.1.2
+* <a href="https://plugins.jetbrains.com/plugin/6351-dart">Dart</a>: 193.7361
+* <a href="https://github.com/localizely/flutter-intl-plugin-sample-app">Flutter intl</a>: 1.8.1-2019.2
+
+### <a href=https://code.visualstudio.com/>Visual Studio Code</a>: 1.47.3
+
+#### Visual Studio Code plugin
+
+* <a href="https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter">Flutter</a>: 3.13.2
+* <a href="https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code">Dart</a>: 3.13.2
+* <a href="https://github.com/localizely/flutter-intl-plugin-sample-app">Flutter intl</a>: 1.9.1
 
 ## Credits
 

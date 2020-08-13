@@ -12,16 +12,23 @@ It aims to be a sample app for release with Flutter. For example, support for lo
 
 ## Develop Environment
 
-### Flutter SDK: v1.9.1
+### <a href="https://flutter.dev/">Flutter SDK</a>: v1.20.1
 
-### Android Studio: 3.5.1
+### <a href="https://developer.android.com/studio">Android Studio</a>: 4.0.1
 
-#### Plugins:
+#### Android Studio plugin
 
-* Flutter: MUST
-* Dart: MUST
-* Flutter i18n: recommended. It makes to easy Flutter localization.
-* Kotlin: recommended
+* <a href="https://plugins.jetbrains.com/plugin/9212-flutter">Flutter</a>: 48.1.2
+* <a href="https://plugins.jetbrains.com/plugin/6351-dart">Dart</a>: 193.7361
+* <a href="https://github.com/localizely/flutter-intl-plugin-sample-app">Flutter intl</a>: 1.8.1-2019.2
+
+### <a href=https://code.visualstudio.com/>Visual Studio Code</a>: 1.47.3
+
+#### Visual Studio Code plugin
+
+* <a href="https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter">Flutter</a>: 3.13.2
+* <a href="https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code">Dart</a>: 3.13.2
+* <a href="https://github.com/localizely/flutter-intl-plugin-sample-app">Flutter intl</a>: 1.9.1
 
 ## Credits
 
