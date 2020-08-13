@@ -3,7 +3,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_tools_sample/generated/i18n.dart';
+import 'package:flutter_tools_sample/generated/l10n.dart';
 import 'package:toast/toast.dart';
 
 // ref. https://programming.vip/docs/flutter-58-graphical-flutter-embedded-in-native-android-view-trial.html

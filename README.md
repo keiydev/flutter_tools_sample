@@ -3,30 +3,30 @@
 [English version]
 https://github.com/keiydev/flutter_tools_sample/blob/master/README_en.md
 
-Flutter‚Åì¬‚µ‚½ƒTƒ“ƒvƒ‹ƒAƒvƒŠ‚Å‚·B
-‘½Œ¾Œê‰»‘Î‰‚È‚ÇAƒAƒvƒŠƒŠƒŠ[ƒX‚É•K—v‚È—v‘f‚ğ‘g‚İ‚ñ‚Å‚¢‚«‚½‚¢‚Æv‚¢‚Ü‚·B
+Flutterã§ä½œæˆã—ãŸã‚µãƒ³ãƒ—ãƒ«ã‚¢ãƒ—ãƒªã§ã™ã€‚
+å¤šè¨€èªåŒ–å¯¾å¿œãªã©ã€ã‚¢ãƒ—ãƒªãƒªãƒªãƒ¼ã‚¹ã«å¿…è¦ãªè¦ç´ ã‚’çµ„ã¿è¾¼ã‚“ã§ã„ããŸã„ã¨æ€ã„ã¾ã™ã€‚
 
 <a href='https://play.google.com/store/apps/details?id=com.keiydev.flutter_tools_sample&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
   <img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' width='200'/>
 </a>
 
-## ŠJ”­ŠÂ‹«
+## é–‹ç™ºç’°å¢ƒ
 
 ### Flutter SDK: v1.9.1
 
 ### Android Studio: 3.5.1
 
-#### g—pPlugin: 
+#### ä½¿ç”¨Plugin: 
 
-* Flutter: •K{
-* Dart: •K{
-* Flutter i18n: ‚¨‚·‚·‚ßBFlutter‚Ì‘½Œ¾Œê‘Î‰‚ğŠy‚É‚µ‚Ä‚­‚ê‚éB
-* Kotlin: ‚¨‚·‚·‚ßBAndroid‘¤‚Ìjava‚©‚çkotlin‚Ö‚ÌˆÚs‚ÉB
+* Flutter: å¿…é ˆ
+* Dart: å¿…é ˆ
+* Flutter i18n: ãŠã™ã™ã‚ã€‚Flutterã®å¤šè¨€èªå¯¾å¿œã‚’æ¥½ã«ã—ã¦ãã‚Œã‚‹ã€‚
+* Kotlin: ãŠã™ã™ã‚ã€‚Androidå´ã®javaã‹ã‚‰kotlinã¸ã®ç§»è¡Œã«ã€‚
 
 ## Credits
 
-‚±‚ÌƒAƒvƒŠ‚Í‘½‚­‚ÌƒŠƒ\[ƒX‚ğQl‚É‚µ‚Ä‚¢‚Ü‚·B
-ˆÈ‰º‚Íˆê—á‚Å‚·B
+ã“ã®ã‚¢ãƒ—ãƒªã¯å¤šãã®ãƒªã‚½ãƒ¼ã‚¹ã‚’å‚è€ƒã«ã—ã¦ã„ã¾ã™ã€‚
+ä»¥ä¸‹ã¯ä¸€ä¾‹ã§ã™ã€‚
 
 * Flutter catalog app: https://github.com/X-Wei/flutter_catalog
 * Offical gallery app: https://github.com/flutter/flutter/tree/master/examples/flutter_gallery
@@ -35,26 +35,26 @@ Flutter‚Åì¬‚µ‚½ƒTƒ“ƒvƒ‹ƒAƒvƒŠ‚Å‚·B
 * Eajy's flutter demo: https://github.com/Eajy/flutter_demo
 * Flutter UI Challenges: https://github.com/lohanidamodar/flutter_ui_challenges
 
-# ‚¨‚Ü‚¯ Flutter“±“ü
+# ãŠã¾ã‘ Flutterå°å…¥
 
 ## Flutter SDK
 
-Windows, macOS, LinuxŒü‚¯‚ÌSDK‚ª‚ ‚è‚Ü‚·B
+Windows, macOS, Linuxå‘ã‘ã®SDKãŒã‚ã‚Šã¾ã™ã€‚
 https://flutter.dev/docs/get-started/install
 
-## FlutterŠwK—pƒŠƒ\[ƒX
+## Flutterå­¦ç¿’ç”¨ãƒªã‚½ãƒ¼ã‚¹
 
-Flutter‚ÍŒö®ƒhƒLƒ…ƒƒ“ƒg‚ª‘½‚­‚ ‚é‚½‚ßAŒã‚©‚ç‚Å‚àˆê’Ê‚è“Ç‚İi‚ß‚é‚±‚Æ‚ğ‚¨Š©‚ß‚µ‚Ü‚·B
-‚½‚¾‚µAŠî–{“I‚É‰pŒê‚Å‚·B
+Flutterã¯å…¬å¼ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆãŒå¤šãã‚ã‚‹ãŸã‚ã€å¾Œã‹ã‚‰ã§ã‚‚ä¸€é€šã‚Šèª­ã¿é€²ã‚ã‚‹ã“ã¨ã‚’ãŠå‹§ã‚ã—ã¾ã™ã€‚
+ãŸã ã—ã€åŸºæœ¬çš„ã«è‹±èªã§ã™ã€‚
 
-EFlutter Docs
+ãƒ»Flutter Docs
 https://flutter.dev/docs
 
-Šw‚Ñ•û‚É‚Â‚¢‚Ä‚ÍˆÈ‰º‚Ì‹L–‚à‚æ‚­‚Ü‚Æ‚Ü‚Á‚Ä‚¢‚ÄQl‚É‚È‚é‚Æv‚¢‚Ü‚·B
-EFlutter‚ÌŒø—¦—Ç‚¢Šw‚Ñ•û
+å­¦ã³æ–¹ã«ã¤ã„ã¦ã¯ä»¥ä¸‹ã®è¨˜äº‹ã‚‚ã‚ˆãã¾ã¨ã¾ã£ã¦ã„ã¦å‚è€ƒã«ãªã‚‹ã¨æ€ã„ã¾ã™ã€‚
+ãƒ»Flutterã®åŠ¹ç‡è‰¯ã„å­¦ã³æ–¹
 https://medium.com/flutter-jp/flutter-learning-c5640c5f05b9
 
-Android, iOS, React Native, web devs, Xamarin.Forms‚ÌŠJ”­ÒŒü‚¯‚Ìî•ñ‚à‚ ‚è‚Ü‚·B
-EAndroidŠJ”­ÒŒü‚¯î•ñ
+Android, iOS, React Native, web devs, Xamarin.Formsã®é–‹ç™ºè€…å‘ã‘ã®æƒ…å ±ã‚‚ã‚ã‚Šã¾ã™ã€‚
+ãƒ»Androidé–‹ç™ºè€…å‘ã‘æƒ…å ±
 https://flutter.dev/docs/get-started/flutter-for/android-devs
 

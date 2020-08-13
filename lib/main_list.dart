@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_tools_sample/android_layout/android_layout_list.dart';
 import 'package:flutter_tools_sample/experimental/listview.dart';
-import 'package:flutter_tools_sample/generated/i18n.dart';
+import 'package:flutter_tools_sample/generated/l10n.dart';
 import 'package:flutter_tools_sample/tools/Calculator.dart';
 import 'package:flutter_tools_sample/zoom_charactor_view.dart';
 import 'package:package_info/package_info.dart';

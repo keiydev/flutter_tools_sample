@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_tools_sample/common/const_vars.dart';
-import 'package:flutter_tools_sample/generated/i18n.dart';
+import 'package:flutter_tools_sample/generated/l10n.dart';
 import 'package:flutter_tools_sample/main_list.dart';
 import 'package:url_launcher/url_launcher.dart';
 

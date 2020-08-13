@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_tools_sample/generated/i18n.dart';
+import 'package:flutter_tools_sample/generated/l10n.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ZoomCharacterPage extends StatelessWidget {

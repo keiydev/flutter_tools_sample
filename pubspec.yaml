@@ -24,7 +24,7 @@ dependencies:
   intl:
   intl_translation:
   package_info: ^0.4.0+6
-  url_launcher: ^5.4.5
+  url_launcher: ^5.5.0
   toast: ^0.1.5
   google_fonts:
 
@@ -86,3 +86,5 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+flutter_intl:
+  enabled: true

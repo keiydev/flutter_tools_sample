@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_tools_sample/generated/i18n.dart';
+import 'package:flutter_tools_sample/generated/l10n.dart';
 
 class ListViewPage extends StatelessWidget {
   static BuildContext _context;
@@ -10,9 +10,7 @@ class ListViewPage extends StatelessWidget {
     _context = context;
     final title = 'ListView page';
     return MaterialApp(
-      title: S
-          .of(context)
-          .app_name,
+      title: S.of(context).app_name,
       localizationsDelegates: [
         S.delegate,
         GlobalMaterialLocalizations.delegate,
@@ -23,7 +21,9 @@ class ListViewPage extends StatelessWidget {
         const Locale('ja', ''),
       ],
       home: Scaffold(
-        appBar: AppBar(title: Text(title),),
+        appBar: AppBar(
+          title: Text(title),
+        ),
         body: HomeWidget(),
       ),
     );
@@ -44,6 +44,7 @@ class ListState extends State<HomeWidget> {
       itemBuilder: (BuildContext context, int index) {
         return Text(index.toString());
       },
-      itemCount: 11,);
+      itemCount: 11,
+    );
   }
 }

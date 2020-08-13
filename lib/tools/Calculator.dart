@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_tools_sample/generated/i18n.dart';
+import 'package:flutter_tools_sample/generated/l10n.dart';
 
 // Inspired by the about page in samarthagarwal flutter code:
 // https://github.com/samarthagarwal/FlutterCalculator
@@ -27,7 +27,10 @@ class _CalculatorPageState extends State<CalculatorPage> {
         buttonText == "÷" ||
         buttonText == "×" ||
         buttonText == "X") {
-      if (operand == "+" || operand == "-" || operand == "÷" || operand == "×") {
+      if (operand == "+" ||
+          operand == "-" ||
+          operand == "÷" ||
+          operand == "×") {
         num2 = double.parse(output);
         if (operand == "+") {
           _output = (num1 + num2).toString();
@@ -99,7 +102,8 @@ class _CalculatorPageState extends State<CalculatorPage> {
   Widget buildButton(String buttonText, Orientation orientation) {
     return Expanded(
       child: OutlineButton(
-        padding: EdgeInsets.all(orientation == Orientation.portrait ? 24.0 : 16.0),
+        padding:
+            EdgeInsets.all(orientation == Orientation.portrait ? 24.0 : 16.0),
         child: Text(
           buttonText,
           style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
@@ -113,52 +117,53 @@ class _CalculatorPageState extends State<CalculatorPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Builder(builder: (context) => Text(S.of(context).tools_my_calculator)),
+          title: Builder(
+              builder: (context) => Text(S.of(context).tools_my_calculator)),
         ),
         body: OrientationBuilder(builder: (context, orientation) {
           return Container(
               child: Column(
-                children: <Widget>[
-                  Container(
-                      alignment: Alignment.centerRight,
-                      padding: EdgeInsets.symmetric(
-                          vertical: 24.0, horizontal: 12.0),
-                      child: Text(output,
-                          style: TextStyle(
-                            fontSize: 48.0,
-                            fontWeight: FontWeight.bold,
-                          ))),
-                  Expanded(
-                    child: new Divider(),
-                  ),
-                  Column(children: [
-                    Row(children: [
-                      buildButton("7", orientation),
-                      buildButton("8", orientation),
-                      buildButton("9", orientation),
-                      buildButton("÷", orientation)
-                    ]),
-                    Row(children: [
-                      buildButton("4", orientation),
-                      buildButton("5", orientation),
-                      buildButton("6", orientation),
-                      buildButton("×", orientation)
-                    ]),
-                    Row(children: [
-                      buildButton("1", orientation),
-                      buildButton("2", orientation),
-                      buildButton("3", orientation),
-                      buildButton("-", orientation)
-                    ]),
-                    Row(children: [
-                      buildButton("0", orientation),
-                      buildButton("C", orientation),
-                      buildButton("=", orientation),
-                      buildButton("+", orientation)
-                    ]),
-                  ])
-                ],
-              ));
+            children: <Widget>[
+              Container(
+                  alignment: Alignment.centerRight,
+                  padding:
+                      EdgeInsets.symmetric(vertical: 24.0, horizontal: 12.0),
+                  child: Text(output,
+                      style: TextStyle(
+                        fontSize: 48.0,
+                        fontWeight: FontWeight.bold,
+                      ))),
+              Expanded(
+                child: new Divider(),
+              ),
+              Column(children: [
+                Row(children: [
+                  buildButton("7", orientation),
+                  buildButton("8", orientation),
+                  buildButton("9", orientation),
+                  buildButton("÷", orientation)
+                ]),
+                Row(children: [
+                  buildButton("4", orientation),
+                  buildButton("5", orientation),
+                  buildButton("6", orientation),
+                  buildButton("×", orientation)
+                ]),
+                Row(children: [
+                  buildButton("1", orientation),
+                  buildButton("2", orientation),
+                  buildButton("3", orientation),
+                  buildButton("-", orientation)
+                ]),
+                Row(children: [
+                  buildButton("0", orientation),
+                  buildButton("C", orientation),
+                  buildButton("=", orientation),
+                  buildButton("+", orientation)
+                ]),
+              ])
+            ],
+          ));
         }));
   }
 }
