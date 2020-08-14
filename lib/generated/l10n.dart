@@ -33,6 +33,16 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `en`
+  String get _locale {
+    return Intl.message(
+      'en',
+      name: '_locale',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Flutter tools sample`
   String get app_name {
     return Intl.message(

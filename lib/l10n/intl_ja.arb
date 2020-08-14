@@ -1,4 +1,5 @@
 {
+  "_locale": "ja",
   "app_name": "Flutter ツールサンプル",
   "common_start": "START",
   "tools_list_title": "ツールリスト",

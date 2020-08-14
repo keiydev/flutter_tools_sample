@@ -1,4 +1,5 @@
 {
+  "_locale": "en",
   "app_name": "Flutter tools sample",
   "app_version": "Calculator",
   "common_start": "START",

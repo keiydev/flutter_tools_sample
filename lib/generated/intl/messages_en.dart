@@ -21,6 +21,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
+    "_locale" : MessageLookupByLibrary.simpleMessage("en"),
     "about_description" : MessageLookupByLibrary.simpleMessage("Flutter tools sample, testing flutter code."),
     "android_layout_list_title" : MessageLookupByLibrary.simpleMessage("Android Layout List"),
     "app_name" : MessageLookupByLibrary.simpleMessage("Flutter tools sample"),
