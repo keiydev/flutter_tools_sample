@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
       // アプリのテーマ設定
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       // アプリのローカリゼーション設定
       localizationsDelegates: [

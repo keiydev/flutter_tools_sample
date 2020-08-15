@@ -4,17 +4,19 @@ import android.content.Intent
 import android.graphics.Point
 import android.os.Bundle
 import android.view.Display
+import androidx.annotation.NonNull
 
-import io.flutter.app.FlutterActivity
+import io.flutter.embedding.android.FlutterActivity
+import io.flutter.embedding.engine.FlutterEngine
+import io.flutter.plugins.GeneratedPluginRegistrant
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
-import io.flutter.plugins.GeneratedPluginRegistrant
 
-import com.keiydev.flutter_tools_sample.viewplugin.NLayoutFactory
-import com.keiydev.flutter_tools_sample.viewplugin.NMethodTextViewFactory
-import com.keiydev.flutter_tools_sample.viewplugin.NBasicTextViewFactory
-import com.keiydev.flutter_tools_sample.viewplugin.NEventTextViewFactory
-import com.keiydev.flutter_tools_sample.viewplugin.NMethodListViewFactory
+import com.keiydev.flutter_tools_sample.viewplugin.NLayoutPlugin
+import com.keiydev.flutter_tools_sample.viewplugin.NMethodTextViewPlugin
+import com.keiydev.flutter_tools_sample.viewplugin.NBasicTextViewPlugin
+import com.keiydev.flutter_tools_sample.viewplugin.NEventTextViewPlugin
+import com.keiydev.flutter_tools_sample.viewplugin.NMethodListViewPlugin
 
 class MainActivity: FlutterActivity() {
   companion object {
@@ -24,46 +26,7 @@ class MainActivity: FlutterActivity() {
     private const val METHOD_TEST = "launchNativeScreen"
   }
 
-  override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    GeneratedPluginRegistrant.registerWith(this)
-    NLayoutFactory.registerWith(this)
-    NMethodTextViewFactory.registerWith(this)
-    NBasicTextViewFactory.registerWith(this)
-    NEventTextViewFactory.registerWith(this)
-    NMethodListViewFactory.registerWith(this)
 
-    // MethodChannelからのメッセージを受け取ります
-    // （flutterViewはFlutterActivityのプロパティ、CHANNELはcompanion objectで定義しています）
-    MethodChannel(this.flutterView, CHANNEL)
-            .setMethodCallHandler { methodCall: MethodCall, result: MethodChannel.Result ->
-              when(methodCall.method) {
-                METHOD_TEST -> {
-                  // invokeMethodの第二引数で指定したパラメータを取得できます
-                  val parameters = methodCall.arguments<String>()
-                  launchAndroidScreen(parameters)
-                }
-                "getDisplayHeight" -> {
-                  val display : Display = windowManager.defaultDisplay
-                  val size : Point = Point()
-                  display.getRealSize(size)
-                  val width = size.x
-                  val height = size.y
-                  result.success(height)
-                }
-                "getDisplayWidth" -> {
-                  val display : Display = windowManager.defaultDisplay
-                  val size : Point = Point()
-                  display.getRealSize(size)
-                  val width = size.x
-                  val height = size.y
-                  result.success(width)
-                }
-              }
-              if (methodCall.method == METHOD_TEST) {
-              }
-            }
-  }
 
   private fun launchAndroidScreen(parameters: String) {
     val intent = Intent()
@@ -72,5 +35,49 @@ class MainActivity: FlutterActivity() {
     //intent.setClassName(getPackageName(), ".LinearLayoutActivity")
     //intent.setClass(this, LinearLayoutActivity::class.java)
     startActivity(intent)
+  }
+
+  override fun configureFlutterEngine(@NonNull flutterEngine: FlutterEngine) {
+    GeneratedPluginRegistrant.registerWith(flutterEngine)
+    flutterEngine.plugins.add(NLayoutPlugin())
+    flutterEngine.plugins.add(NMethodTextViewPlugin())
+    flutterEngine.plugins.add(NBasicTextViewPlugin())
+    flutterEngine.plugins.add(NEventTextViewPlugin())
+    flutterEngine.plugins.add(NMethodListViewPlugin())
+    //NLayoutFactory.registerWith(this)
+    //NMethodTextViewFactory.registerWith(this)
+    //NBasicTextViewFactory.registerWith(this)
+    //NEventTextViewFactory.registerWith(this)
+    //NMethodListViewFactory.registerWith(this)
+
+    MethodChannel(flutterEngine.dartExecutor.binaryMessenger, CHANNEL)
+    .setMethodCallHandler { methodCall: MethodCall, result: MethodChannel.Result ->
+      when(methodCall.method) {
+        METHOD_TEST -> {
+          // invokeMethodの第二引数で指定したパラメータを取得できます
+          val parameters = methodCall.arguments<String>()
+          launchAndroidScreen(parameters)
+        }
+        "getDisplayHeight" -> {
+          val display : Display = windowManager.defaultDisplay
+          val size : Point = Point()
+          display.getRealSize(size)
+          val width = size.x
+          val height = size.y
+          result.success(height)
+        }
+        "getDisplayWidth" -> {
+          val display : Display = windowManager.defaultDisplay
+          val size : Point = Point()
+          display.getRealSize(size)
+          val width = size.x
+          val height = size.y
+          result.success(width)
+        }
+        else -> {
+          result.notImplemented()
+        }
+      }
+    }
   }
 }

@@ -11,8 +11,8 @@ import io.flutter.plugin.platform.PlatformView;
 import io.flutter.plugin.platform.PlatformViewFactory;
 
 public class NMethodListViewFactory extends PlatformViewFactory {
-    private static final String PLUGIN_KEY = "NMethodListView";
-    private static final String VIEW_TYPE_ID = "com.ace.ace_demo01/method_list_view";
+    public static final String PLUGIN_KEY = "NMethodListView";
+    public static final String VIEW_TYPE_ID = "com.ace.ace_demo01/method_list_view";
     private final BinaryMessenger messenger;
 
     public NMethodListViewFactory(BinaryMessenger messenger) {
@@ -24,11 +24,5 @@ public class NMethodListViewFactory extends PlatformViewFactory {
     public PlatformView create(Context context, int i, Object o) {
         Map<String, Object> params = (Map<String, Object>) o;
         return new NMethodListView(context, messenger, i, params);
-    }
-
-    public static void registerWith(PluginRegistry registry) {
-        if (registry.hasPlugin(PLUGIN_KEY)) return;
-        PluginRegistry.Registrar registrar = registry.registrarFor(PLUGIN_KEY);
-        registrar.platformViewRegistry().registerViewFactory(VIEW_TYPE_ID, new NMethodListViewFactory(registrar.messenger()));
     }
 }
