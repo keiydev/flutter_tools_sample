@@ -7,6 +7,7 @@ import 'package:flutter_tools_sample/experimental/listview.dart';
 import 'package:flutter_tools_sample/generated/l10n.dart';
 import 'package:flutter_tools_sample/tools/Calculator.dart';
 import 'package:flutter_tools_sample/zoom_charactor_view.dart';
+import 'package:flutter_tools_sample/tools/firebase/firebase_messaging.dart';
 import 'package:package_info/package_info.dart';
 
 class ToolsListPage extends StatelessWidget {
@@ -103,6 +104,22 @@ class ToolsListPage extends StatelessWidget {
           enabled: Platform.isAndroid,
           onTap: () {
             openDialog(_context, 1);
+          },
+        )),
+    Container(
+        decoration: new BoxDecoration(
+          border: new Border(
+            bottom: new BorderSide(color: Colors.black26),
+          ),
+        ),
+        child: ListTile(
+          leading: Icon(Icons.cloud),
+          title: Text('Firebase Messaging Demo'),
+          onTap: () {
+            Navigator.push(
+                _context,
+                MaterialPageRoute(
+                    builder: (context) => PushMessagingExample()));
           },
         )),
     Container(
