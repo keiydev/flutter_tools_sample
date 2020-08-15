@@ -26,8 +26,6 @@ class MainActivity: FlutterActivity() {
     private const val METHOD_TEST = "launchNativeScreen"
   }
 
-
-
   private fun launchAndroidScreen(parameters: String) {
     val intent = Intent()
     intent.action = android.provider.Settings.ACTION_SETTINGS
@@ -44,11 +42,6 @@ class MainActivity: FlutterActivity() {
     flutterEngine.plugins.add(NBasicTextViewPlugin())
     flutterEngine.plugins.add(NEventTextViewPlugin())
     flutterEngine.plugins.add(NMethodListViewPlugin())
-    //NLayoutFactory.registerWith(this)
-    //NMethodTextViewFactory.registerWith(this)
-    //NBasicTextViewFactory.registerWith(this)
-    //NEventTextViewFactory.registerWith(this)
-    //NMethodListViewFactory.registerWith(this)
 
     MethodChannel(flutterEngine.dartExecutor.binaryMessenger, CHANNEL)
     .setMethodCallHandler { methodCall: MethodCall, result: MethodChannel.Result ->

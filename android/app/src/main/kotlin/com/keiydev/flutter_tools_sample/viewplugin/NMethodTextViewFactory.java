@@ -12,7 +12,7 @@ import io.flutter.plugin.platform.PlatformViewFactory;
 
 public class NMethodTextViewFactory extends PlatformViewFactory {
     public static final String PLUGIN_KEY = "NMethodTextView";
-    public static final String VIEW_TYPE_ID = "com.ace.ace_demo01/method_text_view";
+    public static final String VIEW_TYPE_ID = "com.keiydev.flutter_tools_sample/method_text_view";
     private final BinaryMessenger messenger;
 
     public NMethodTextViewFactory(BinaryMessenger messenger) {

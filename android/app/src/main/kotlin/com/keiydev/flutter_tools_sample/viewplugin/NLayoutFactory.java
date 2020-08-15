@@ -12,7 +12,7 @@ import io.flutter.plugin.platform.PlatformViewFactory;
 
 public class NLayoutFactory extends PlatformViewFactory {
     public static final String PLUGIN_KEY = "NLayout";
-    public static final String VIEW_TYPE_ID = "com.ace.ace_demo01/method_layout";
+    public static final String VIEW_TYPE_ID = "com.keiydev.flutter_tools_sample/method_layout";
     private final BinaryMessenger messenger;
 
     public NLayoutFactory(BinaryMessenger messenger) {

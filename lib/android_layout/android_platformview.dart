@@ -52,14 +52,14 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Container(
                 child: AndroidView(
-                    viewType: "com.ace.ace_demo01/method_layout",
+                    viewType: "com.keiydev.flutter_tools_sample/method_layout",
                     creationParamsCodec: const StandardMessageCodec(),
                     creationParams: {'method_layout_size': 100}),
                 color: Colors.pinkAccent,
                 height: 100.0),
             Container(
                 child: AndroidView(
-                    viewType: "com.ace.ace_demo01/method_layout",
+                    viewType: "com.keiydev.flutter_tools_sample/method_layout",
                     creationParamsCodec: const StandardMessageCodec(),
                     creationParams: {'method_layout_size': 100}),
                 color: Colors.greenAccent,
@@ -83,7 +83,8 @@ class _MyHomePageState extends State<MyHomePage> {
                           return null; // void
                         });
                     },
-                    viewType: "com.ace.ace_demo01/method_text_view",
+                    viewType:
+                        "com.keiydev.flutter_tools_sample/method_text_view",
                     creationParamsCodec: const StandardMessageCodec(),
                     creationParams: {
                       'method_text_str': 'Method Channel Params!!'
@@ -104,7 +105,8 @@ class _MyHomePageState extends State<MyHomePage> {
                           print('===${message.toString()}==');
                         });
                     },
-                    viewType: "com.ace.ace_demo01/basic_text_view",
+                    viewType:
+                        "com.keiydev.flutter_tools_sample/basic_text_view",
                     creationParamsCodec: const StandardMessageCodec(),
                     creationParams: {
                       'basic_text_str': 'Basic Channel Params!!'
@@ -124,7 +126,8 @@ class _MyHomePageState extends State<MyHomePage> {
                         }
                       });
                     },
-                    viewType: "com.ace.ace_demo01/event_text_view",
+                    viewType:
+                        "com.keiydev.flutter_tools_sample/event_text_view",
                     creationParamsCodec: const StandardMessageCodec(),
                     creationParams: {
                       'event_text_str': 'Event Channel Params!!'
@@ -157,7 +160,8 @@ class _MyHomePageState extends State<MyHomePage> {
                               }
                             });
                         },
-                        viewType: "com.ace.ace_demo01/method_list_view",
+                        viewType:
+                            "com.keiydev.flutter_tools_sample/method_list_view",
                         creationParamsCodec: const StandardMessageCodec(),
                         creationParams: {'method_list_size': 10}))),
             Container(
