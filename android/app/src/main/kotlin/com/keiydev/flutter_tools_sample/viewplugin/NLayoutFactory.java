@@ -11,8 +11,8 @@ import io.flutter.plugin.platform.PlatformView;
 import io.flutter.plugin.platform.PlatformViewFactory;
 
 public class NLayoutFactory extends PlatformViewFactory {
-    private static final String PLUGIN_KEY = "NLayout";
-    private static final String VIEW_TYPE_ID = "com.ace.ace_demo01/method_layout";
+    public static final String PLUGIN_KEY = "NLayout";
+    public static final String VIEW_TYPE_ID = "com.ace.ace_demo01/method_layout";
     private final BinaryMessenger messenger;
 
     public NLayoutFactory(BinaryMessenger messenger) {
@@ -25,12 +25,5 @@ public class NLayoutFactory extends PlatformViewFactory {
         Map<String, Object> params = (Map<String, Object>) o;
         // create view
         return new NLayout(context, messenger, i, params);
-    }
-
-    public static void registerWith(PluginRegistry registry) {
-        if (registry.hasPlugin(PLUGIN_KEY)) return;
-        PluginRegistry.Registrar registrar = registry.registrarFor(PLUGIN_KEY);
-        // register factory
-        registrar.platformViewRegistry().registerViewFactory(VIEW_TYPE_ID, new NLayoutFactory(registrar.messenger()));
     }
 }
